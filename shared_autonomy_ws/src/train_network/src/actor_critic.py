@@ -1,5 +1,9 @@
 import numpy as np 
 import random
-from keras.model import Sequential
-from keras.layers import Dense
-from keras.optimizers import Adam
+import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import torch.nn.parameter as Parameter
+from torch.autograd import Variable
+import torch.optim as optim
+import torch.multiprocessing as mp
