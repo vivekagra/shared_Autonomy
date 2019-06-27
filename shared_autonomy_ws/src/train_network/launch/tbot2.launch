@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+    <rosparam command="load" file="$(find tbot2_internship)/config/tbot2_params.yaml" />
+    <!-- Launch the training system -->
+    <node pkg="tbot2_internship" name="tbot2" type="train.py" output="screen"/>
+</launch>

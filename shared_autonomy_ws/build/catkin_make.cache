@@ -1,2 +1,2 @@
-
+train_network:vision
 -DCATKIN_DEVEL_PREFIX=/home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/devel -DCMAKE_INSTALL_PREFIX=/home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/install -G Unix Makefiles
