@@ -117,6 +117,9 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/build/gtest/cmake_install.cmake")
+  include("/home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/build/openai_ros/openai_ros/cmake_install.cmake")
+  include("/home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/build/train_network/cmake_install.cmake")
+  include("/home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/build/openai_examples_projects/turtle2_openai_ros_example/cmake_install.cmake")
 
 endif()
 

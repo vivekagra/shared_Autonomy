@@ -11,5 +11,6 @@ export CMAKE_PREFIX_PATH="/home/vivek/Desktop/Vivek/shared_Autonomy/shared_auton
 export LD_LIBRARY_PATH="/home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/devel/lib:$LD_LIBRARY_PATH"
 export PKG_CONFIG_PATH="/home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD="/home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/build"
-export ROSLISP_PACKAGE_DIRECTORIES="/home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export PYTHONPATH="/home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/devel/lib/python2.7/dist-packages:$PYTHONPATH"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/devel/share/common-lisp"
 export ROS_PACKAGE_PATH="/home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/src:$ROS_PACKAGE_PATH"
