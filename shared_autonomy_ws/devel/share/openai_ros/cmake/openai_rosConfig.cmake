@@ -67,7 +67,7 @@ set(openai_ros_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(openai_ros_SOURCE_PREFIX /home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/src/openai_ros/openai_ros)
+  set(openai_ros_SOURCE_PREFIX /home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/src/openai_ros)
   set(openai_ros_DEVEL_PREFIX /home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/devel)
   set(openai_ros_INSTALL_PREFIX "")
   set(openai_ros_PREFIX ${openai_ros_DEVEL_PREFIX})
@@ -110,7 +110,7 @@ if(NOT "/home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/devel/inclu
         message(FATAL_ERROR "Project 'openai_ros' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'openai_ros' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/src/openai_ros/openai_ros/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'openai_ros' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/src/openai_ros/${idir}'.  ${_report}")
     endif()
     _list_append_unique(openai_ros_INCLUDE_DIRS ${include})
   endforeach()
