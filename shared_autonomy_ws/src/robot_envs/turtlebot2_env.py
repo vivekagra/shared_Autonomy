@@ -71,7 +71,8 @@ class TurtleBot2Env(robot_gazebo_env.RobotGazeboEnv):
         rospy.Subscriber("/camera/depth/image_raw", Image, self._camera_depth_image_raw_callback)
         rospy.Subscriber("/camera/depth/points", PointCloud2, self._camera_depth_points_callback)
         rospy.Subscriber("/camera/rgb/image_raw", Image, self._camera_rgb_image_raw_callback)
-        rospy.Subscriber("/kobuki/laser/scan", LaserScan, self._laser_scan_callback)
+        #rospy.Subscriber("/camera/scan", LaserScan, self._laser_scan_callback)
+        # rospy.Subscriber("/kobuki/laser/scan", LaserScan, self._laser_scan_callback)
 
         self._cmd_vel_pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
 
@@ -100,11 +101,11 @@ class TurtleBot2Env(robot_gazebo_env.RobotGazeboEnv):
     def _check_all_sensors_ready(self):
         rospy.logdebug("START ALL SENSORS READY")
         self._check_odom_ready()
-        # We dont need to check for the moment, takes too long
-        #self._check_camera_depth_image_raw_ready()
-        #self._check_camera_depth_points_ready()
-        #self._check_camera_rgb_image_raw_ready()
-        self._check_laser_scan_ready()
+        #We dont need to check for the moment, takes too long
+        self._check_camera_depth_image_raw_ready()
+        self._check_camera_depth_points_ready()
+        self._check_camera_rgb_image_raw_ready()
+        #self._check_laser_scan_ready()
         rospy.logdebug("ALL SENSORS READY")
 
     def _check_odom_ready(self):
@@ -320,11 +321,11 @@ class TurtleBot2Env(robot_gazebo_env.RobotGazeboEnv):
         rospy.logwarn("END wait_until_twist_achieved...")
 
         return delta_time
-
+# ----------------------------- check has crashed or not using depth data ------------------------------ 
     def has_crashed(self, min_laser_distance):
         """
         It states based on the laser scan if the robot has crashed or not.
-        Crashed means that the minimum laser reading is lower than the
+        Crashed means that the minimum depth reading is lower than the
         min_laser_distance value given.
         If min_laser_distance == -1, it returns always false, because its the way
         to deactivate this check.
