@@ -1,5 +1,5 @@
 # define action space and command it to robot
-
+# This code will take an action command and then convert it to robot action and command it to robot
 import rospy
 from geometry_msgs.msg import Twist
 from std_msgs.msg import Float32
@@ -9,9 +9,9 @@ class Cmd_action_to_robot():
     def __init__(self):
         self.init_node('action')
         
-        self.action_sub      = rospy.Subscriber('cmd_action', Int16, take_action_cb)
+        self.action_sub      = rospy.Subscriber('action_cmd', Int16, take_action_cb)
         
-        self.cmd_vel_pub     = rospy.Pubscriber('cmd_vel', Twist, queue_size=1)
+        self.cmd_vel_pub     = rospy.Publisher('cmd_vel', Twist, queue_size=1)
         #self.linear_vel_pub  = rospy.Publisher('linear_vel', Float32, queue_size=10)
         #self.angular_vel_pub = rospy.Publisher('angular_vel', Float32, queue_size=10)
         

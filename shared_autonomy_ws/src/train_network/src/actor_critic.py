@@ -1,5 +1,9 @@
 import numpy as np 
 import random
+import gym
+import os
+from tensorboard import summary
+
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -7,15 +11,16 @@ import torch.nn.parameter as Parameter
 from torch.autograd import Variable
 import torch.optim as optim
 import torch.multiprocessing as mp
-import gym
-import os
+
 
 
 # define some default paramenters
-gamma = 0.9
-learning_rate = 
+ENV_ID = "Puzzle-v1"
+GAMMA = 0.9
+LEARNING_RATE = 0.001
 MAX_EP = 4000
-
+BATCH_SIZE = 32
+TEST_ITERS = 10000
 
 # use the id of environment you wanat to use
 env = gym.make('')
