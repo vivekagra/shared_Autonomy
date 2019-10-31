@@ -1,2 +1,0 @@
-openai_examples_projects/turtle2_openai_ros_example:openai_ros:train_network
--DCATKIN_DEVEL_PREFIX=/home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/devel -DCMAKE_INSTALL_PREFIX=/home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/install -G Unix Makefiles

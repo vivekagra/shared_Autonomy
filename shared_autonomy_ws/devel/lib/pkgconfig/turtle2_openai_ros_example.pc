@@ -1,8 +1,0 @@
-prefix=/home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/devel
-
-Name: turtle2_openai_ros_example
-Description: Description of turtle2_openai_ros_example
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/vivek/Desktop/Vivek/shared_Autonomy/shared_autonomy_ws/devel/lib 
-Requires: 
